@@ -37,7 +37,7 @@ describe('GET: /v1/users', () => {
   test('uuid 로 사용자 조회. | 200', async () => {
     let response = await request(app)
       .get(`/v1/users/${user.uuid}`)
-
+    console.log(response.body)
     expect(response.body.email)
       .toBe(user.email)
   })

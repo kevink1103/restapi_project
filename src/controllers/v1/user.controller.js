@@ -1,10 +1,24 @@
-import {models} from '../../models'
+import httpStatus from 'http-status'
+import createError from 'http-errors'
+import userRepo from '../../repositories/user.repository'
 
 const get = async (req, res, next) => {
   try {
-    const users = await models.User.findAll()
+    if (req.params.uuid) {
+      const user = await userRepo.find(req.params.uuid)
 
-    return res.json(users)
+      if (!user) {
+        throw (createError(httpStatus.NOT_FOUND, '사용자를 찾을 수 없습니다.'))
+      }
+
+      return res
+        .status(httpStatus.OK)
+        .json(user)
+    } else {
+      const users = await userRepo.all()
+
+      return res.json(users)
+    }
   } catch (e) {
     next(e)
   }

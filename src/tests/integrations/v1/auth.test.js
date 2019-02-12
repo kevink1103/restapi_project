@@ -11,6 +11,7 @@ afterAll(() => models.sequelize.close())
 describe('로그인 테스트', () => {
 
   let userData;
+  let token;
 
   beforeAll(async () => {
     userData = {
@@ -30,10 +31,21 @@ describe('로그인 테스트', () => {
         password: userData.password
       })
 
-    expect(response.statusCode)
-      .toBe(200)
-    expect(response.body.data.token)
-      .toBeTruthy()
+    expect(response.statusCode).toBe(200)
+    expect(response.body.data.token).toBeTruthy()
+
+    expect(response.statusCode).toBe(200)
+    expect(response.body.data.token).toBeTruthy()
+
+    const payload = jwt.verify(response.body.data.token, process.env.JWT_SECRET)
+    expect(userData.email).toBe(payload.email)
+
+    const user = await userRepo.find(payload.uuid)
+    expect(userData.email).toBe(user.email)
+    
+    console.log(payload)
+
+    token = response.body.data.token
   })
 
   test('없는 사용자로 로그인. | 404', async () => {
@@ -62,5 +74,15 @@ describe('로그인 테스트', () => {
       .toBe(422)
     expect(response.body.data.message)
       .toBe('비밀번호를 확인 해주세요.')
+  })
+
+  test('token 으로 사용자 조회. | 200', async () => {
+    let response = await request(app)
+      .get('/v1/auth/tokenTest')
+      .set('Authorization', `Bearer ${token}`)
+
+    expect(response.body.data.email).toBe(userData.email)
+
+    console.log(reponse.body.data)
   })
 })

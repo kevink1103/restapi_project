@@ -14,3 +14,4 @@ A Production Grade REST API Development using Express
 9. [https://medium.com/aha-official/아하-rest-api-서버-개발-9-d75f4eab80d5](https://medium.com/aha-official/아하-rest-api-서버-개발-9-d75f4eab80d5)
 10. [https://medium.com/aha-official/아하-rest-api-서버-개발-10-c09764e116f9](https://medium.com/aha-official/아하-rest-api-서버-개발-10-c09764e116f9)
 11. [https://medium.com/aha-official/아하-rest-api-서버-개발-11-fbdd2cdb7e78](https://medium.com/aha-official/아하-rest-api-서버-개발-11-fbdd2cdb7e78)
+12. [https://medium.com/aha-official/아하-rest-api-서버-개발-12-80702e33ad47](https://medium.com/aha-official/아하-rest-api-서버-개발-12-80702e33ad47)

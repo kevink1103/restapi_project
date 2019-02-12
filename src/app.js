@@ -4,6 +4,7 @@ import createError from 'http-errors'
 import express from 'express'
 import cookieParser from 'cookie-parser'
 import logger from 'morgan'
+import jwtMiddleware from './middlewares/jwt.middleware'
 import response from './utils/response'
 import v1Route from './routes/v1'
 
@@ -15,6 +16,8 @@ app.use(express.urlencoded({
   extended: false
 }))
 app.use(cookieParser())
+
+app.use(jwtMiddleware)
 
 app.use('/v1', v1Route)
 

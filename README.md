@@ -9,7 +9,7 @@ A Production Grade RESTful API Boilerplate using Express.js and PostgreSQL.
 git clone https://github.com/kevink1103/restapi_project.git
 
 # Change directory
-cd restapi_project
+cd restapi_project/src
 
 # Run PostgreSQL Server using Docker
 docker-compose up

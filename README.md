@@ -11,6 +11,9 @@ git clone https://github.com/kevink1103/restapi_project.git
 # Change directory
 cd restapi_project/src
 
+# Make sure to set env variables
+mv example.env .env && vi .env
+
 # Run PostgreSQL Server using Docker
 docker-compose up
 
@@ -18,9 +21,6 @@ docker-compose up
 
 # Install NPM dependencies
 npm install --save-dev
-
-# Make sure to set env variables
-mv example.env .env && vi .env
 
 # Migrate using Sequelize
 sequelize db:migrate

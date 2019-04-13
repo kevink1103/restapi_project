@@ -2,7 +2,7 @@ version: '3'
 services:
   postgres:
     image: postgres
-    container_name: unisquare_postgres
+    container_name: restapi_postgres
     ports:
       - 5432:5432
     volumes:

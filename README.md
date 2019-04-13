@@ -20,6 +20,12 @@ npm install --save-dev
 # Make sure to set env variables
 mv example.env .env && vi .env
 
+# Migrate using Sequelize
+sequelize db:migrate
+
+# Try seeding
+sequelize db:seed:all
+
 # Then simply start your app
 npm start
 

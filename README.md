@@ -17,10 +17,16 @@ docker-compose up
 # Install NPM dependencies
 npm install --save-dev
 
+# Make sure to set env variables
+mv example.env .env && vi .env
+
 # Then simply start your app
 npm start
 
 ```
+
+You can start developing your server from here.  
+
 
 ## Resources
 

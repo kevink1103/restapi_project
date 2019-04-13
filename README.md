@@ -25,8 +25,11 @@ npm start
 
 ```
 
-For demo, open up Postman and send a POST request to your server.  
-127.0.0.1:3000/v1/users/?email=abc@gmail.com&password=123  
+For demo, open up Postman and send a POST request to your server.
+
+```text
+127.0.0.1:3000/v1/users/?email=abc@gmail.com&password=123
+```
 
 You can start developing your server from here.  
 Integration with Sequelize and PostgreSQL is done for you.

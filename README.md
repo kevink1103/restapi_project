@@ -4,7 +4,7 @@ A Production Grade RESTful API Boilerplate using Express.js and PostgreSQL.
 
 ## Getting Started
 
-```
+```bash
 # Get the latest snapshot
 git clone https://github.com/kevink1103/restapi_project.git
 
@@ -25,8 +25,11 @@ npm start
 
 ```
 
-You can start developing your server from here.  
+For demo, open up Postman and send a POST request to your server.  
+127.0.0.1:3000/v1/users/?email=abc@gmail.com&password=123  
 
+You can start developing your server from here.  
+Integration with Sequelize and PostgreSQL is done for you.
 
 ## Resources
 

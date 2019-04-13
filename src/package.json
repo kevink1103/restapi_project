@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "nodemon ./bin/www --exec babel-node --presets babel-preset-env",
+    "start": "nodemon ./bin/www --exec babel-node --presets @babel/preset-env",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {

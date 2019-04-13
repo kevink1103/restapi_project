@@ -33,10 +33,10 @@ npm start
 
 ```
 
-For demo, open up Postman and send a POST request to your server.
+For demo, open up Postman and send a GET request to your server.
 
 ```text
-127.0.0.1:3000/v1/users/?email=abc@gmail.com&password=123
+127.0.0.1:3000/v1/users/
 ```
 
 You can start developing your server from here.  

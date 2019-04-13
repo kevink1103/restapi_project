@@ -4,7 +4,6 @@ import {models} from '../../models'
 const get = async (req, res, next) => {
   try {
     const users = await models.User.findAll()
-
     return res.json(users)
   } catch (e) {
     next(e)
@@ -14,14 +13,12 @@ const get = async (req, res, next) => {
 const post = async (req, res, next) => {
   try {
     const user = {
-      email: req.query.email,
-      password: req.query.password,
+      email: req.body.email,
+      password: req.body.password,
       createdAt: moment().format("YYYY-MM-DD HH:MM"),
       updatedAt: moment().format("YYYY-MM-DD HH:MM")
     }
-
     models.User.create(user).then(() => {
-      console.log(user)
       return res.json(user)
     })
   } catch (e) {

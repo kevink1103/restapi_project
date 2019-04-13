@@ -14,6 +14,8 @@ cd restapi_project/src
 # Run PostgreSQL Server using Docker
 docker-compose up
 
+# Open a new bash to proceed
+
 # Install NPM dependencies
 npm install --save-dev
 

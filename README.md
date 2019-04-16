@@ -19,6 +19,10 @@ docker-compose up
 
 # Open a new bash to proceed
 
+# Install sequelize-cli and nodemon globally
+npm install -g sequelize-cli
+npm install -g nodemon
+
 # Install NPM dependencies
 npm install --save-dev
 

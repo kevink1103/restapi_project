@@ -14,9 +14,7 @@ const post = async (req, res, next) => {
   try {
     const user = {
       email: req.body.email,
-      password: req.body.password,
-      createdAt: moment().format("YYYY-MM-DD HH:MM"),
-      updatedAt: moment().format("YYYY-MM-DD HH:MM")
+      password: req.body.password
     }
     models.User.create(user).then(() => {
       return res.json(user)

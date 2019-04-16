@@ -1,0 +1,6 @@
+language: node_js
+node_js:
+  - "11"
+before_install:
+  - npm i -g sequelize-cli
+  - npm i -g nodemon

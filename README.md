@@ -1,5 +1,7 @@
 # RESTful API Boilerplate
 
+[![Build Status](https://travis-ci.org/kevink1103/restapi_project.svg?branch=master)](https://travis-ci.org/kevink1103/restapi_project)
+
 A Production Grade RESTful API Boilerplate using Express.js and PostgreSQL.
 
 ## Getting Started

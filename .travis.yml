@@ -4,9 +4,7 @@ node_js:
 services:
   - postgresql
 env:
-  - PORT=3000
-  - DB_NAME=test
-  - DB_TEST=test
+  - PORT=3000 DB_NAME=test DB_TEST=test
 before_install:
   - cd src
   - npm i -g sequelize-cli

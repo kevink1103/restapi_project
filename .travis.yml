@@ -10,7 +10,6 @@ before_install:
 install:
   - npm i --save-dev
 before_script:
-  - cd src
   - psql -c 'create database test;' -U postgres
 script:
   - npm test

@@ -1,22 +1,26 @@
-require('dotenv').config();
+require('dotenv').config()
 
 import createError from 'http-errors'
 import express from 'express'
 import path from 'path'
 import cookieParser from 'cookie-parser'
 import logger from 'morgan'
+import compression from 'compression'
+import helmet from 'helmet'
 
 import v1Route from './routes/v1'
 
-var app = express();
+var app = express()
 
-app.use(logger('dev'));
-app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
-app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(compression())
+app.use(helmet())
+app.use(logger('dev'))
+app.use(express.json())
+app.use(express.urlencoded({ extended: false }))
+app.use(cookieParser())
+app.use(express.static(path.join(__dirname, 'public')))
 
-app.use('/v1', v1Route);
+app.use('/v1', v1Route)
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

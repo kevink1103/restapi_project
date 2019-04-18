@@ -49,6 +49,9 @@ sequelize db:seed:all
 # Then simply start your app
 npm start
 
+# Or try testing
+npm test
+
 ```
 
 For demo, open up Postman and send a GET request to your server.

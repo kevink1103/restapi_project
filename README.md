@@ -4,6 +4,17 @@
 
 A Production Grade RESTful API Boilerplate using Express.js and PostgreSQL.
 
+- [x] Express.js
+- [x] Sequelize
+- [x] Docker Compose
+- [x] PostgeSQL
+- [x] Babel
+- [x] Compression
+- [x] Helmet
+- [x] Jest
+- [x] Supertest
+- [x] Travis CI
+
 ## Getting Started
 
 ```bash

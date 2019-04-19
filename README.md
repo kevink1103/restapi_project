@@ -11,8 +11,9 @@ A Production Grade RESTful API Boilerplate using Express.js and PostgreSQL.
 - [x] Babel
 - [x] Compression
 - [x] Helmet
+- [ ] CRUD Separation
 - [ ] JWT
-- [ ] Unified Response
+- [ ] Unified Responsorye
 - [ ] Redis
 - [x] Jest
 - [x] Supertest

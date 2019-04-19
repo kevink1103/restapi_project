@@ -13,6 +13,7 @@ A Production Grade RESTful API Boilerplate using Express.js and PostgreSQL.
 - [x] Helmet
 - [ ] JWT
 - [ ] Unified Response
+- [ ] Redis
 - [x] Jest
 - [x] Supertest
 - [x] Travis CI

@@ -3,8 +3,9 @@ node_js:
   - "11"
 services:
   - postgresql
+  - redis-server
 env:
-  - PORT=3000 DB_NAME=test DB_TEST=test
+  - PORT=3000 DB_NAME=test DB_TEST=test JWT_SECRET=tHl5is5eCr3t JWT_EXPIRESIN=3600000
 before_install:
   - cd src
   - npm i -g sequelize-cli

@@ -11,11 +11,11 @@ A Production Grade RESTful API Boilerplate using Express.js and PostgreSQL.
 - [x] Babel
 - [x] Compression
 - [x] Helmet
-- [ ] UUID
-- [ ] CRUD Separation
-- [ ] JWT
-- [ ] Unified Response
-- [ ] Redis
+- [x] UUID
+- [x] CRUD Separation
+- [x] JWT
+- [x] Unified Response
+- [x] Redis
 - [x] Jest
 - [x] Supertest
 - [x] Travis CI

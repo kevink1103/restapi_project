@@ -1,14 +1,17 @@
 import express from 'express'
-import {get, post} from '../../controllers/v1/user.controller'
+import {get, post, deleteAll} from '../../controllers/v1/user.controller'
 
 const router = express.Router()
 
-router.route('/')
+router.route('/:uuid?')
   .get(
     get
   )
   .post(
     post
+  )
+  .delete(
+    deleteAll
   )
 
 export default router

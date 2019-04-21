@@ -1,10 +1,25 @@
-import moment from 'moment'
-import models from '../../models'
+import httpStatus from 'http-status'
+import createError from 'http-errors'
+import UserRepo from '../../repositories/user.repository'
 
 const get = async (req, res, next) => {
   try {
-    const users = await models.User.findAll()
-    return res.json(users)
+    const userRepo = new UserRepo()
+
+    if (req.params.uuid) {
+      const user = await userRepo.find(req.params.uuid)
+
+      if (!user) {
+        throw(createError(httpStatus.NOT_FOUND, 'Cannot find the User.'))
+      }
+
+      return res.json(user.toWeb())
+    }
+    else {
+      const users = await userRepo.all()
+
+      return res.json(users.map(user => user.toWeb()))
+    }
   } catch (e) {
     next(e)
   }
@@ -16,8 +31,23 @@ const post = async (req, res, next) => {
       email: req.body.email,
       password: req.body.password
     }
-    models.User.create(user).then(() => {
-      return res.json(user)
+    
+    const userRepo = new UserRepo()
+    const createdUser = await userRepo.store(user)
+
+    return res.json(createdUser.toWeb())
+  } catch (e) {
+    next(e)
+  }
+}
+
+const deleteAll = async (req, res, next) => {
+  try {
+    const userRepo = new UserRepo()
+    await userRepo.deleteAll()
+
+    return res.json({
+      message: "All deleted"
     })
   } catch (e) {
     next(e)
@@ -26,5 +56,6 @@ const post = async (req, res, next) => {
 
 export {
   get,
-  post
+  post,
+  deleteAll
 }

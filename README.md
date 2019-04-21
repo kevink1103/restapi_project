@@ -44,28 +44,72 @@ npm install -g nodemon
 # Install NPM dependencies
 npm install --save-dev
 
+# Try testing - this should be successful
+npm test
+
 # Migrate using Sequelize
 sequelize db:migrate
 
-# Try seeding
-sequelize db:seed:all
-
 # Then simply start your app
 npm start
-
-# Or try testing
-npm test
-
 ```
 
-For demo, open up Postman and send a GET request to your server.
+### How to use (with Postman)
+
+1. Create a user
+POST request
+Body - x-www-form-urlencoded
+KEY:
+email
+password
+
+```text
+127.0.0.1:3000/v1/users/
+```
+
+2. Get specific user with UUID
+GET request
+
+```text
+127.0.0.1:3000/v1/users/UUID_FROM_ABOVE_RESULT/
+```
+
+3. Get all users
+GET request
+
+```text
+127.0.0.1:3000/v1/users/
+```
+
+4. Login
+POST request
+Body - x-www-form-urlencoded
+KEY:
+email
+password
+
+```text
+127.0.0.1:3000/v1/auth/login/
+```
+
+5. Test token
+GET request
+Authorization - Bearer Token
+Token: TOKEN_RECEIVED_FROM_ABOVE_RESULT
+
+```text
+127.0.0.1:3000/v1/auth/tokenTest/
+```
+
+6. Delete all users
+DELETE request
 
 ```text
 127.0.0.1:3000/v1/users/
 ```
 
 You can start developing your server from here.  
-Integration with Sequelize and PostgreSQL is done for you.
+Integration with Sequelize and PostgreSQL and Redis is done for you.
 
 ## Resources
 

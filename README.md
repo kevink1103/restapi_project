@@ -56,53 +56,53 @@ npm start
 
 ### How to use (with Postman)
 
-1. Create a user
-POST request
-Body - x-www-form-urlencoded
-KEY:
-email
-password
+1. Create a user  
+POST request  
+Body - x-www-form-urlencoded  
+KEY:  
+email  
+password  
 
 ```text
 127.0.0.1:3000/v1/users/
 ```
 
-2. Get specific user with UUID
-GET request
+2. Get specific user with UUID  
+GET request  
 
 ```text
 127.0.0.1:3000/v1/users/UUID_FROM_ABOVE_RESULT/
 ```
 
-3. Get all users
-GET request
+3. Get all users  
+GET request  
 
 ```text
 127.0.0.1:3000/v1/users/
 ```
 
-4. Login
-POST request
-Body - x-www-form-urlencoded
-KEY:
-email
-password
+4. Login  
+POST request  
+Body - x-www-form-urlencoded  
+KEY:  
+email  
+password  
 
 ```text
 127.0.0.1:3000/v1/auth/login/
 ```
 
-5. Test token
-GET request
-Authorization - Bearer Token
-Token: TOKEN_RECEIVED_FROM_ABOVE_RESULT
+5. Test token  
+GET request  
+Authorization - Bearer Token  
+Token: TOKEN_RECEIVED_FROM_ABOVE_RESULT  
 
 ```text
 127.0.0.1:3000/v1/auth/tokenTest/
 ```
 
-6. Delete all users
-DELETE request
+6. Delete all users  
+DELETE request  
 
 ```text
 127.0.0.1:3000/v1/users/

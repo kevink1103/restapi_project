@@ -1,7 +1,9 @@
 import redis from 'redis'
 import bluebird from 'bluebird'
 
-const client = redis.createClient()
+const client = redis.createClient({
+  host: process.env.DB_HOST
+})
 client.on('error', e => {
   console.error(`redis error : ${e}`)
 })

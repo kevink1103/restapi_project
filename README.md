@@ -32,7 +32,7 @@ cd restapi_project/src
 # Make sure to set env variables
 cp example.env .env && vi .env
 
-# Run PostgreSQL Server using Docker
+# Run PostgreSQL and Redis using Docker
 docker-compose up
 
 # Open a new bash to proceed
@@ -43,8 +43,13 @@ npm install -g nodemon
 
 # Install NPM dependencies
 npm install --save-dev
+# If this does not work
+sudo npm install --save-dev --unsafe-perm=true --allow-root
 
-# Try testing - this should be successful
+# Create a database for testing
+docker exec -it unisquare_postgres psql -U <name> -c "CREATE DATABASE <testname>;"
+
+# Try testing - this should be successful!
 npm test
 
 # Migrate using Sequelize

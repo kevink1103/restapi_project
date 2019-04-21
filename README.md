@@ -30,7 +30,7 @@ git clone https://github.com/kevink1103/restapi_project.git
 cd restapi_project/src
 
 # Make sure to set env variables
-mv example.env .env && vi .env
+cp example.env .env && vi .env
 
 # Run PostgreSQL Server using Docker
 docker-compose up

@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/kevink1103/restapi_project.svg?branch=master)](https://travis-ci.org/kevink1103/restapi_project)
 
-A Production Grade RESTful API Boilerplate using Express.js and PostgreSQL.
+A Production Grade RESTful API Boilerplate using Express.js, PostgreSQL and Redis as Caching.
 
 - [x] Express.js
 - [x] Sequelize
@@ -115,7 +115,7 @@ DELETE request
 ```
 
 You can start developing your server from here.  
-Integration with Sequelize and PostgreSQL and Redis is done for you.
+Integration with Sequelize, PostgreSQL and Redis is done for you.
 
 ## Resources
 

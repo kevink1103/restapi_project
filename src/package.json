@@ -38,6 +38,7 @@
     "@babel/preset-env": "^7.4.3",
     "@babel/register": "^7.4.0",
     "babel-jest": "^24.7.1",
+    "cors": "^2.8.5",
     "jest": "^24.7.1",
     "supertest": "^4.0.2"
   }

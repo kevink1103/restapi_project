@@ -8,6 +8,7 @@ import morgan from 'morgan'
 import moment from 'moment'
 import compression from 'compression'
 import helmet from 'helmet'
+import cors from 'cors'
 
 import response from './utils/response'
 import jwtMiddleware from './middlewares/jwt.middleware'
@@ -28,6 +29,7 @@ app.use(cookieParser())
 app.use(express.static(path.join(__dirname, 'public')))
 
 app.use(jwtMiddleware)
+app.use(cors())
 
 app.use('/v1', v1Route)
 

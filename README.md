@@ -48,7 +48,7 @@ sudo npm install --save-dev --unsafe-perm=true --allow-root
 
 # Create a database for testing
 # Replace <DB_USER> and <DB_TEST> to your own in .env
-docker exec -it unisquare_postgres psql -U <DB_USER> -c "CREATE DATABASE <DB_TEST>;"
+docker exec -it restapi_postgres psql -U <DB_USER> -c "CREATE DATABASE <DB_TEST>;"
 
 # Try testing - this should be successful!
 npm test

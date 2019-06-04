@@ -2,7 +2,7 @@ version: '3'
 services:
   postgres:
     image: postgres
-    container_name: unisquare_postgres
+    container_name: restapi_postgres
     ports:
       - 5432:5432
     volumes:
@@ -13,7 +13,7 @@ services:
       POSTGRES_PASSWORD: ${DB_PW}
   redis:
     image: redis
-    container_name: unisquare_redis
+    container_name: restapi_redis
     ports:
       - 6379:6379
     volumes:

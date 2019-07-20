@@ -19,6 +19,8 @@ A Production Grade RESTful API Boilerplate using Express.js, PostgreSQL and Redi
 - [x] Jest
 - [x] Supertest
 - [x] Travis CI
+- [x] Sentry
+- [x] Slack
 
 ## Getting Started
 

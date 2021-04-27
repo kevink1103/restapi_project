@@ -26,7 +26,7 @@
     "morgan": "^1.9.1",
     "pg": "^7.9.0",
     "random-string": "^0.2.0",
-    "redis": "^2.8.0",
+    "redis": "^3.1.1",
     "sequelize": "^5.3.3",
     "uuid4": "^1.1.4",
     "winston": "^3.2.1"
